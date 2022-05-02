@@ -8,17 +8,7 @@ const assertEqual = (actual, expected) =>{
 
 // function which takes an array as argument
 const tail = (arr) =>{
-  //creating an array to store results
-  const find = [];
-  //storing data in a variable and adding a counter
-  let first = 0;
-  
-  for (let i = 1; i < arr.length; i++) {
-    find[first] = arr[i];
-    first++;
-  }
-  // returning results
-  return find;
+ return arr.slice(1);
 };
 
 // Test case 1
