@@ -8,7 +8,7 @@ const assertEqual = (actual, expected) =>{
 
 // function which takes an array as argument
 const tail = (arr) =>{
- return arr.slice(1);
+  return arr.slice(1);
 };
 
 // Test case 1
