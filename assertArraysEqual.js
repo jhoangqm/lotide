@@ -1,20 +1,17 @@
 
+// Create a function which takes in two arrays and returns true or false based on a perfect match
 const eqArrays = function(arr1, arr2) {
-  // define a boolean value of a variable start with false
-    let equal = false;
-    // for loop to increment to check elements in each array via an index
-    for (let i = 0; i < arr1.length; i++) {
-      // if both array indexes are equal the variable will be true
-      if (arr1[i] === arr2[i]) {
-        equal = true;
-        // otherwise the variable will be false
-      } else {
-        equal = false;
-      }
+  // for loop to increment to check elements in each array via an index
+  for (let i = 0; i < arr1.length; i++) {
+    // if both array indexes are equal the variable will be true
+    if (arr1[i] !== arr2[i]) {
+      return false;
     }
-    // return results to see if both are perfect match
-    return equal;
+  }
+  // return results to see if both are perfect match
+  return true;
 };
+
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
