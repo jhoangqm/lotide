@@ -14,19 +14,14 @@ const assertArraysEqual = function(arr1, arr2) {
     return console.log(`🛑 Assertion failed:  ${arr1} !== ${arr2}`);
   }
 };
-// Create functions
 const even = (array) => array.length % 2 === 0 && array.length > 2;
 const middle = function(array) {
-  // define variable as middle array
   let midArray = [];
   let findMiddle = Math.floor(array.length / 2);
-  // if the length of the array is uneven return the middle index
   if (array.length < 3) return midArray;
-  // if the array is even, return results of mid array
   if (!even(array)) {
     midArray.push(array[findMiddle]); return midArray;
   }
-  // slice the array of find middle and return mid array
   midArray = array.slice(findMiddle - 1, findMiddle + 1);
   return midArray;
 
