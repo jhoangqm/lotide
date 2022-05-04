@@ -23,7 +23,6 @@ for ( items of allItems){
     }
   }
 }
-console.log("items:", items, "results[items]:", results[items])
 console.log(results);
 return results;
 }
