@@ -12,10 +12,10 @@ const countLetters = function (string) {
   const results = {};
   // Define a variable that removes spaces from a string
   const noSpaces = string.split(" ").join("");
-  // console.log(noSpaces);
+  // debugging console.log(noSpaces);
   // for..of loop
   for (letter of noSpaces) {
-    // console.log(letter);
+    // debugging console.log(letter);
     // using .match method regex!!
     if (letter.match(/[a-zA-Z]/i)) {
       if (results[letter]) {
