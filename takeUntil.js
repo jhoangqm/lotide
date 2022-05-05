@@ -19,12 +19,8 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
-// The function will return slice of the array with elements taken from
-// the beginning
-
 const takeUntil = function (array, callback) {
   let results = [];
-  //write a loop to get elements from array
   for (let item of array) {
     if (callback(item) === false) {
       results.push(item);

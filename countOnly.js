@@ -6,30 +6,21 @@ const assertEqual = (actual, expected) =>{
   }
 };
 
-// countOnly will be given an array and an object. 
-// It will return an object containing counts of everything that the input object listed.
-// Creating function that counts the input object listed.
+
 const countOnly = (allItems, itemsToCount) => {
-// Store results in the object variable
-let results = {};
-// for loop to count items in allItems
-for ( items of allItems){
-  // if there's items in itemsToCount
-  if ( itemsToCount[items]){
-    if (results[items]){
-      results[items] += 1;
-    } else {
-      results[items] = 1;
+  let results = {};
+  for (items of allItems) {
+    if (itemsToCount[items]) {
+      if (results[items]) {
+        results[items] += 1;
+      } else {
+        results[items] = 1;
+      }
     }
   }
-}
-console.log(results);
-return results;
-}
-
-
-
-
+  console.log(results);
+  return results;
+};
 
 // test cases
 const firstNames = [

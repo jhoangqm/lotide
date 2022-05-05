@@ -1,18 +1,11 @@
-//flatten is a function which does something like this. 
-// Given an array with other arrays inside, it can flatten it into a single-level array.
-
-// Create flatten function which will contain the nested array
-const flatten = function(arr){
-  // Define a variable to an array and trying out built in function reduce previous to current
+const flatten = function (arr) {
   let newArr = arr.reduce((previous, current) => {
-    // return the output of built in function concatenating two arrays
     return previous.concat(current);
-  },[]);
-  // return the newly built array
+  }, []);
   return newArr;
-}
-  
-const eqArrays = function(arr1, arr2) {
+};
+
+const eqArrays = function (arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
@@ -21,7 +14,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function (arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     return console.log(`🔥 Assertion success:  ${arr1} === ${arr2}`);
   } else {

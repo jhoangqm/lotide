@@ -1,4 +1,4 @@
-const assertEqual = (actual, expected) =>{
+const assertEqual = (actual, expected) => {
   if (actual === expected) {
     return console.log(`🔥 Assertion success:  ${actual} === ${expected}`);
   } else {
@@ -6,5 +6,5 @@ const assertEqual = (actual, expected) =>{
   }
 };
 
-assertEqual('Lighthouse Labs', "Bootcamp");
+assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
