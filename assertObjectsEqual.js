@@ -8,10 +8,15 @@ const eqArrays = function (arr1, arr2) {
 };
 
 const assertObjectsEqual = function (actual, expected) {
+  const inspect = require("util").inspect;
   if (eqObjects(actual, expected)) {
-    return console.log(`🔥 Assertion success:  ${actual} === ${expected}`);
+    return console.log(
+      `🔥🔥🔥🔥 Assertion success:  ${inspect(actual)} === ${inspect(expected)}`
+    );
   } else {
-    return console.log(`🛑 Assertion failed:  ${actual} !== ${expected}`);
+    return console.log(
+      `🛑🛑🛑🛑 Assertion failed:  ${inspect(actual)} !== ${inspect(expected)}`
+    );
   }
 };
 
@@ -38,3 +43,6 @@ console.log(eqObjects(cd, dc)); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 console.log(eqObjects(cd, cd2)); // => false
+
+assertObjectsEqual(cd, dc);
+assertObjectsEqual(cd, cd2);
