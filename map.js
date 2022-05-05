@@ -21,19 +21,15 @@ const assertArraysEqual = function (arr1, arr2) {
 
 const map = function (array, callback) {
   const results = [];
-  for (let item of array) {
-    // console.log("item BEFORE: ", item);
-    // console.log("item AFTER: ", callback(item));
-    // console.log("---");
+  for (const item of array) {
     results.push(callback(item));
   }
   return results;
 };
 
 const words = ["ground", "control", "to", "major", "tom"];
+const results1 = map(words, (word) => word[0]);
 
-assertArraysEqual(
-  map(["1111", "1245", "12345"], (test) => test[0], ["2", "3"])
-);
-assertArraysEqual(map(["11", "12345"], (test) => test[0] + "lol", ["2", "3"]));
-assertArraysEqual(map(["1111", "1245", "12345"], (test) => test / 2, [2, 3]));
+assertArraysEqual(results1, ["1111", "1245", "12345"]);
+assertArraysEqual(results1, ["11", "12345"]);
+assertArraysEqual(results1, ["1111", "1245", "12345"]);
