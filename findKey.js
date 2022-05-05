@@ -6,19 +6,17 @@ const assertEqual = (actual, expected) => {
   }
 };
 
-const findKey = function (object, callback) {
+const findKey = (object, callback) => {
   for (const key of Object.keys(object)) {
     if (callback(object[key])) {
       return key;
     }
-    return undefined;
   }
 };
 
 // test case
 assertEqual(
   findKey(
-    "noma",
     {
       "Blue Hill": { stars: 1 },
       Akaleri: { stars: 3 },
@@ -28,5 +26,6 @@ assertEqual(
       Akelarre: { stars: 3 },
     },
     (x) => x.stars === 2
-  )
+  ),
+  "noma"
 ); // => "noma"
