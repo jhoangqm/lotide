@@ -24,7 +24,14 @@ const assertArraysEqual = function (arr1, arr2) {
 
 const takeUntil = function (array, callback) {
   let results = [];
-  return results;
+  //write a loop to get elements from array
+  for (let item of array) {
+    if (callback(item) === false) {
+      results.push(item);
+    } else {
+      return results;
+    }
+  }
 };
 
 // // expected Input
