@@ -4,19 +4,28 @@ const eqArrays = require("./eqArrays");
 const eqObjects = function (object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
-  if (
-    keys1.length !== keys2.length ||
-    Array.isArray(object1) ||
-    Array.isArray(object2)
-  )
+
+  if (keys1.length !== keys2.length) {
     return false;
+  }
+
   for (const key of keys1) {
-    // added recursion if it's an instanceof Object
-    if (object2[key] instanceof Object || object1[key] instanceof Object) {
-      return eqObjects(object1[key], object2[key]);
-      // otherwise if its not equal to an object return false
-    } else if (object1[key] !== object2[key]) {
-      return false;
+    // added recursion if it's an typeof Object
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if (!eqArrays(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (
+      typeof object1[key] === "object" &&
+      typeof object2[key] === "object"
+    ) {
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
+      }
+    } else {
+      if (object1[key] !== object2[key]) {
+        return false;
+      }
     }
   }
   return true;
