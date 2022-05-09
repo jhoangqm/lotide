@@ -12,3 +12,4 @@ describe("#countLetters", () => {
     assert.strictEqual(results2["h"], 4);
   });
 });
+//

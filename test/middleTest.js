@@ -20,3 +20,4 @@ describe("#middle", () => {
 });
 
 module.exports = middle;
+//

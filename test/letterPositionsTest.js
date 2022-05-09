@@ -13,3 +13,4 @@ describe("#letterPositions", () => {
     assert.deepEqual(results2["h"], [3, 5, 15, 18]);
   });
 });
+//

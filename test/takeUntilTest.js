@@ -26,3 +26,4 @@ describe("#takeUntil", () => {
     assert.deepEqual(results2, ["I've", "been", "to", "Hollywood"]);
   });
 });
+//

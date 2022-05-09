@@ -11,3 +11,4 @@ describe("#tail", () => {
 });
 
 module.exports = tail;
+//

@@ -43,3 +43,4 @@ describe("#eqObjects", () => {
     assert.equal(eqObjects(isNested, differentNest), false);
   });
 });
+//

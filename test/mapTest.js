@@ -33,3 +33,4 @@ describe("#map", () => {
     assert.deepEqual(map(myFavWords, returnFirstLetter), ["m", "s", "o"]);
   });
 });
+//
