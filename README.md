@@ -34,7 +34,6 @@ The following functions are currently implemented:
 - `findKey`: accepts an object and a value: it will verify the object and returns the first key for which the callback function returns a truthy value
 - `findKeyByValue`: searches for a key on an object that matches a given value
 - `flatten`: given a single nested array, flattens into a single-level array
-
 - `letterPositions`: returns all the indicators of each character in the given string
 - `map`: iterates over given array and applies given callback function
 - `takeUntil`: collects items from the provided array until the callback provided returns a truthy value
@@ -44,4 +43,3 @@ The following functions are currently implemented:
 - `assertObjectsEqual`: Asserts strict equality of actual and expected objects
 - `assertEqual`: Asserts strict equality of actual and expected input value
 - `assertArraysEqual`: Asserts strict equality of actual array and expected array
-  ``:
