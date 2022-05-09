@@ -1,6 +1,6 @@
 {
   "name": "@jhoangqm/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "\"Functions created for the LHL lotide assignment\"",
   "main": "index.js",
   "directories": {
